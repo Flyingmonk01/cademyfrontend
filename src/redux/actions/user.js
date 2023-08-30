@@ -52,9 +52,15 @@ export const loadUser = () => async dispatch => {
         withCredentials: true,
       }
     );
+    console.log(data);
     dispatch({ type: 'loadUserSuccess', payload: data.user });
   } catch (error) {
-    dispatch({ type: 'loadUserFail', payload: error.response.data.message });
+    if (error.response && error.response.data && error.response.data.message) {
+      dispatch({ type: 'loadUserFail', payload: error.response.data.message });
+    } else {
+      // Handle the error in a way that makes sense for your application
+      dispatch({ type: 'loadUserFail', payload: 'An error occurred while loading user data.' });
+    }
   }
 };
 

@@ -20,4 +20,4 @@ const store = configureStore({
 
 export default store;
 
-export const server = 'https://cademy-qsss.vercel.app/api/v1';
+export const server = 'https://cademybackend.vercel.app/api/v1';

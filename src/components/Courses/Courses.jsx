@@ -90,8 +90,8 @@ const Courses = () => {
   const [category, setCategory] = useState('');
   const dispatch = useDispatch();
 
-  const addToPlaylistHandler = async couseId => {
-    await dispatch(addToPlaylist(couseId));
+  const addToPlaylistHandler = async (courseId) => {
+    await dispatch(addToPlaylist(courseId));
     dispatch(loadUser());
   };
 

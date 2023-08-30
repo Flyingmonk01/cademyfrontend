@@ -125,7 +125,7 @@ const Register = () => {
           </Button>
 
           <Box my="4">
-            Already Signed Up?{' '}
+            Existing User?{' '}
             <Link to="/login">
               <Button colorScheme={'yellow'} variant="link">
                 Login
